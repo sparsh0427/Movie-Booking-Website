@@ -28,7 +28,7 @@ $sql="select distinct movie_name from movie_details order by rating desc" ;
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>MovieBuster</title>
+    <title>NetflixParty</title>
 	<!-- JQuery CDN -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Bootstrap core CSS -->
@@ -156,7 +156,7 @@ $sql="select distinct movie_name from movie_details order by rating desc" ;
 			<div class="feature-item">
                     <i class="icon-calendar text-primary"></i>
                     <h3>Early Booking</h3>
-                    <p class="text-muted">One can book tickets 2 days prior to the show through MovieBuster!</p>
+                    <p class="text-muted">One can book tickets 2 days prior to the show through Netflix Party!</p>
                   </div>
 			</div>
 			<div class="col-lg-4 mx-auto">

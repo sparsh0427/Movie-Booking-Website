@@ -643,7 +643,7 @@
 			localStorage.setItem('cost',cost);
 			
 			
-			window.location.href = "payment.php";
+			window.location.href = "form.php";
 
 		}
 		
