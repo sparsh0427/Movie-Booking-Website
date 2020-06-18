@@ -54,7 +54,7 @@
     
 	<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top " id="mainNav">
       <div class="container">
-        <a class="navbar-brand " href="#page-top">Movie Buster</a>
+        <a class="navbar-brand " href="#page-top">Netflix Party</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -83,7 +83,7 @@
 
     <footer>
       <div class="container">
-        <p>&copy; Our Website 2018. All Rights Reserved.</p>
+        <p>&copy; Chaddzz Pvt. Ltd. 2020. All Rights Reserved.</p>
         <ul class="list-inline">
           <li class="list-inline-item">
             <a href="#">Privacy</a>

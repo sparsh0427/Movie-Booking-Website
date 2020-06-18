@@ -24,8 +24,8 @@ $posted['productinfo']="Movie";
 $posted['firstname']=$_SESSION['useremail'];
 $posted['email']=$_SESSION['useremail'];
 $posted['phone']="9876543210";
-$posted['sur1']="http://localhost/payment/success.php";
-$posted['fur1']="http://localhost/payment/failure.php";
+$posted['sur1']="http://localhost/MOVIE-BOOKING-WEBSITE/success.php";
+$posted['fur1']="http://localhost/MOVIE-BOOKING-WEBSITE/failure.php";
 $posted['service_provider']="payu_paisa";
 
 $formError = 0;

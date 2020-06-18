@@ -74,7 +74,7 @@ $sql="select distinct movie_name from movie_details order by rating desc" ;
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Movie Buster</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Netflix Party</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -100,7 +100,7 @@ $sql="select distinct movie_name from movie_details order by rating desc" ;
         <div class="row h-100">
           <div class="col-lg-7 my-auto" >
             <div class="header-content mx-auto">
-              <h1 class="mb-5">Book movie tickets online hassle free. Movie Buster is the easiest way to book movie tickets!</h1>
+              <h1 class="mb-5">Netflix Party is the easiest way to watch movie with your friends at the comfort of your home!</h1>
               <a href="#book" class="btn btn-outline btn-xl js-scroll-trigger">Book now</a>
             </div>
           </div>
@@ -140,7 +140,7 @@ $sql="select distinct movie_name from movie_details order by rating desc" ;
 	<section class="features">
 	<div class="container">
         <div class="section-heading text-center">
-          <h2>Why should use Movie Buster ?</h2>
+          <h2>Why should use Netflix Party ?</h2>
           <hr>
 		  
         </div>
@@ -331,7 +331,7 @@ $sql="select distinct movie_name from movie_details order by rating desc" ;
 
     <footer>
       <div class="container">
-        <p>&copy; Your Website 2018. All Rights Reserved.</p>
+        <p>&copy; Chaddzz Pvt. Ltd. 2020. All Rights Reserved.</p>
         <ul class="list-inline">
           <li class="list-inline-item">
             <a href="#">Privacy</a>
