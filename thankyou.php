@@ -1,3 +1,33 @@
+<?php
+
+include 'src/instamojo.php';
+// include 'connect.php';
+
+$api = new Instamojo\Instamojo('test_22d83102a17a377441bbf166d22', 'test_f196a0d4c066100c8646a4fb368','https://test.instamojo.com/api/1.1/');
+
+$payid = $_GET["payment_request_id"];
+
+$conn=new mysqli("localhost","root","","movie");
+    $response = $api->paymentRequestStatus($payid);
+    
+    $purpose=$response['purpose'];
+    $amount=$response['payments'][0]['amount'];
+    $name=$response['payments'][0]['buyer_name'];
+    $email=$response['payments'][0]['buyer_email'];
+    $phone=$response['payments'][0]['buyer_phone'];
+    $transaction_id=$response['payments'][0]['payment_id'];
+    $status=$response['status'];
+	
+    
+    
+    $sql = "INSERT INTO forms (`Purpose`,`Amount`,`Name`,`Email`,`Phone`,`Status`) VALUES (`$purpose`, `$amount`, `$name`, `$email`, `$phone`,`$status`)";
+    $conn->query($sql);
+    $conn->close();
+
+
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,49 +55,14 @@
     <div class="container">
 
       <div class="page-header">
-        <h1><a href="index.php">Instamojo Payment</a></h1>
-        <p class="lead">A test payment integration for instamojo paypemnt gateway. Written in PHP</p>
+        <h1><a href="index.php">Thank You, Payment success!!</a></h1>
+        <p class="lead"></p>
       </div>
-
-      <h3 style="color:#6da552">Thank You, Payment succus!!</h3>
+  
+      <h3 style="color:#6da552">Your ticket would be mailed to you soon !!</h3>
   
 
- <?php
 
-include 'src/instamojo.php';
-
-$api = new Instamojo\Instamojo('test_22d83102a17a377441bbf166d22', 'test_f196a0d4c066100c8646a4fb368','https://test.instamojo.com/api/1.1/');
-
-$payid = $_GET["payment_request_id"];
-
-
-try {
-    $response = $api->paymentRequestStatus($payid);
-
-
-    echo "<h4>Payment ID: " . $response['payments'][0]['payment_id'] . "</h4>" ;
-    echo "<h4>Payment Name: " . $response['payments'][0]['buyer_name'] . "</h4>" ;
-    echo "<h4>Payment Email: " . $response['payments'][0]['buyer_email'] . "</h4>" ;
-
-  echo "<pre>";
-   print_r($response);
-echo "</pre>";
-    ?>
-
-
-    <?php
-}
-catch (Exception $e) {
-    print('Error: ' . $e->getMessage());
-}
-
-
-
-  ?>
-
-
-      
-    </div> <!-- /container -->
 
 
   </body>
