@@ -113,15 +113,15 @@ $sql="select distinct movie_name from movie_details order by rating desc" ;
 				</ul>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img src="img/m1.jpg" alt="Movie-1" >
+						<img src="img/mo_1.jpg" alt="Movie-1" >
 					  
 					</div>
 					<div class="carousel-item">
-						<img src="img/m2.jpg" alt="Movie-2" >
+						<img src="img/mo_2.jpg" alt="Movie-2" >
 				  
 					</div>
 					<div class="carousel-item">
-						<img src="img/m3.jpg" alt="Movie-3" >
+						<img src="img/mo_3.jpg" alt="Movie-3" >
 				   
 					</div>
 				</div>

@@ -1,12 +1,28 @@
 <?php 
+
+
 $product_name = $_POST["name_movie"];
 $price = 500;
 $name = $_POST["name"];
 $phone = $_POST["phone"];
 $email = $_POST["email"];
 
+$subject='movie confirmation';
+$message="We have received your payment. See you at the movie";
+$headers="sparsh.chadha27@gmail.com";
+
 $conn=new mysqli("localhost","root","","movie");
 $sql = "INSERT INTO forms (Purpose,Amount,Name,Email,Phone) VALUES (`$product_name`, `$price`, `$name`, `$email`, `$phone`)";
+
+if(mail($email, $subject, $message, $headers)){
+    echo "Sent";
+}
+else{
+    echo "Not sent";
+}
+
+
+
 
 
 include 'src/instamojo.php';

@@ -33,7 +33,7 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Booking Info</h2>
-                    <form method="POST" action="insert.php">
+                    <form method="POST" action="insert.php" enctype="multipart/form-data">
                         <div class="input-group">
                             <input class="input--style-3" type="text" placeholder="Movie Name" name="name_movie" required>
                         </div>
