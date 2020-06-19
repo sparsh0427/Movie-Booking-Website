@@ -1,13 +1,14 @@
 <?php
 
 include 'src/instamojo.php';
-// include 'connect.php';
+include 'connect.php';
 
 $api = new Instamojo\Instamojo('test_22d83102a17a377441bbf166d22', 'test_f196a0d4c066100c8646a4fb368','https://test.instamojo.com/api/1.1/');
 
 $payid = $_GET["payment_request_id"];
 
-$conn=new mysqli("localhost","root","","movie");
+
+
     $response = $api->paymentRequestStatus($payid);
     
     $purpose=$response['purpose'];
@@ -17,15 +18,7 @@ $conn=new mysqli("localhost","root","","movie");
     $phone=$response['payments'][0]['buyer_phone'];
     $transaction_id=$response['payments'][0]['payment_id'];
     $status=$response['status'];
-	
-    
-    
-    $sql = "INSERT INTO forms (`Purpose`,`Amount`,`Name`,`Email`,`Phone`,`Status`) VALUES (`$purpose`, `$amount`, `$name`, `$email`, `$phone`,`$status`)";
-    $conn->query($sql);
-    $conn->close();
-
-
-  
+	  
 ?>
 
 <!DOCTYPE html>
@@ -60,8 +53,22 @@ $conn=new mysqli("localhost","root","","movie");
       </div>
   
       <h3 style="color:#6da552">Your ticket would be mailed to you soon !!</h3>
-  
 
+      <button class="btn btn--pill btn--green" type="submit" onclick="foo()">Back to Movies Section</button>
+
+      <script>
+          function foo(){
+            window.location.href = "movie.php";
+
+          }
+      </script>
+  
+          <?php
+            $conn=new mysqli("localhost","root","","movie");
+            $sql = "INSERT INTO forms (`Purpose`,`Amount`,`Name`,`Email`,`Phone`,`Status`) VALUES (`$purpose`, `$amount`, `$name`, `$email`, `$phone`,`$status`)";
+            
+
+          ?>
 
 
 

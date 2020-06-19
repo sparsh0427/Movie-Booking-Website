@@ -5,6 +5,9 @@ $name = $_POST["name"];
 $phone = $_POST["phone"];
 $email = $_POST["email"];
 
+$conn=new mysqli("localhost","root","","movie");
+$sql = "INSERT INTO forms (Purpose,Amount,Name,Email,Phone) VALUES (`$product_name`, `$price`, `$name`, `$email`, `$phone`)";
+
 
 include 'src/instamojo.php';
 

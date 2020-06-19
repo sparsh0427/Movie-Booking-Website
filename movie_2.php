@@ -39,7 +39,7 @@
 					<div class="card-body">
 						<h5 class="card-title"><b>Synopsis</b></h5>
 						<p class="card-text"><small>'.$synopsis.'</small></p>
-						<p class="card-text"><small class="text-muted">Rating : '.$rating[0].'/5</small></p>
+						<p class="card-text"><small class="text-muted">IMDb : '.$rating[0].'/5</small></p>
 					</div>
 				</div>
   
